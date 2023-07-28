@@ -169,12 +169,10 @@ crie um novo array onde cada string tem todos os seus caracteres em maiúsculas 
 const strings = ['Olá', 'Mundo', 'EM', 'maiúsculas'];
 
 const new_uppercase_strings = strings.map((string) => {
-    if (string === string.toLowerCase()) {
-        return string.toUpperCase();
-    }
-    return string;
+    return string === string.toLowerCase() ? string.toUpperCase() : string;
+
 });
-//console.log(new_uppercase_strings);
+console.log(new_uppercase_strings);
 
 // ============= Exercício 10 - Minha resolução ============= //
 /*
@@ -211,6 +209,37 @@ const musicas = [
     { nome: 'Smells Like Teen Spirit', artista: 'Nirvana', album: 'Nevermind', duracao: '5:01' }
 ];
 const new_array_filter_map = musicas
-    .filter(artista=>artista.nome  && artista.artista)
+    .filter(artista => artista.nome && artista.artista)
     .map(singer => singer.nome + ' - ' + singer.artista)
 //console.log(new_array_filter_map);
+
+function number(n) {
+    let newArr = 0;
+    for (let i = 1; i <= n; i++) {
+        newArr += i;
+    }
+    return newArr;
+}
+
+//console.log(number(4));
+//when the input(n) increases, the time complexity increases too.
+//O(n)
+
+function sum(n) {
+    return n * (n + 1) / 2;
+}
+//console.log(sum(4));
+
+String.prototype.toJadenCase = function () {
+    function capitalizeFirstLetter(match) {
+        return match.toUpperCase();
+    }
+
+    // Updated regular expression to handle words with single quotes
+    let newString = this.replace(/\b\w'/g, capitalizeFirstLetter);
+
+    return newString;
+};
+//console.log("How can mirrors be real if our eyes aren't real".toJadenCase());
+
+
