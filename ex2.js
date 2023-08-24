@@ -172,7 +172,7 @@ const new_uppercase_strings = strings.map((string) => {
     return string === string.toLowerCase() ? string.toUpperCase() : string;
 
 });
-console.log(new_uppercase_strings);
+//console.log(new_uppercase_strings);
 
 // ============= Exercício 10 - Minha resolução ============= //
 /*
@@ -242,4 +242,45 @@ String.prototype.toJadenCase = function () {
 };
 //console.log("How can mirrors be real if our eyes aren't real".toJadenCase());
 
+function fibonacci(n) {
+    const arr = [0, 1];
+    for (let i = 2; i < n; i++) {
+        arr[i] = arr[i - 1] + arr[i - 2];
+    }
+    return arr;
+}
+//Big O = O(n)
 
+//console.log(fibonacci(2));
+//console.log(fibonacci(3));
+//console.log(fibonacci(7));
+
+function factorial(n) {
+    let result = 1;
+    for (let i = 2; i <= n; i++) {
+        result *= i;
+    }
+    return result;
+}
+//console.log(factorial(5));
+
+function primeNumber(n) {
+    if (n < 2) return false;
+    for (let i = 2; i < n; i++) {
+        return n % i === 0 ? false : true;
+    }
+}
+
+//console.log(primeNumber(1));
+//console.log(primeNumber(6));
+
+
+function powerOfTwo(n) {
+    if (n < 1) return false;
+
+    for (let i = 1; i <= n; i++) {
+        return 2 ** 1 === n ? true : false;
+    }
+}
+
+//console.log(powerOfTwo(8));

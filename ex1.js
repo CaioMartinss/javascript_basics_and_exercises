@@ -11,7 +11,6 @@ function positiveSum(arr) {
 //console.log(positiveSum([1,2,3,4,5]));
 
 
-
 function makeNegative(number) {
     if (number > 0) {
         return number * -1;

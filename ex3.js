@@ -15,9 +15,6 @@ const numbersGreaterThan37 = randomNumbers.filter((item) => {
 //console.log(numbersGreaterThan37);
 
 
-
-
-
 // ===================== Exercício 2 =====================
 const users = [
     { name: 'Ada Lovelace', premium: true },

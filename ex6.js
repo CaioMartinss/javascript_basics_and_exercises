@@ -26,7 +26,7 @@ const phaseScores = [
 ];
 
 const roger_score = phaseScores.reduce((accumulator, phaseScores) =>{
-    if(phaseScores.name === "Roger Melo"){
+    if(phaseScores.name === "Alfredo Braga"){
         return accumulator + phaseScores.score;
     }
 
@@ -34,4 +34,4 @@ const roger_score = phaseScores.reduce((accumulator, phaseScores) =>{
 }, 0);
 
 
-console.log(roger_score);
+//console.log(roger_score);
